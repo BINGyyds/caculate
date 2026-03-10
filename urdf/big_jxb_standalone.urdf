@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="big_jxb_urdf">
+  <link
+    name="big_base_link">
+    <inertial>
+      <origin
+        xyz="-5.6134E-18 0 0.6"
+        rpy="0 0 0" />
+      <mass
+        value="66.916" />
+      <inertia
+        ixx="9.4175"
+        ixy="0"
+        ixz="0"
+        iyy="9.4175"
+        iyz="-2.2345E-32"
+        izz="2.7751" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/big_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/big_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="biglink1">
+    <inertial>
+      <origin
+        xyz="2.9584E-09 -0.047588 -0.029497"
+        rpy="0 0 0" />
+      <mass
+        value="28.357" />
+      <inertia
+        ixx="1.4075"
+        ixy="-1.4704E-08"
+        ixz="1.0237E-07"
+        iyy="1.1997"
+        iyz="0.039805"
+        izz="1.0699" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/biglink1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/biglink1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bigjoint1"
+    type="revolute">
+    <origin
+      xyz="0 0 1.536"
+      rpy="0 0 3.1416" />
+    <parent
+      link="big_base_link" />
+    <child
+      link="biglink1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.61"
+      upper="2.61"
+      effort="400"
+      velocity="0.03" />
+  </joint>
+  <link
+    name="biglink2">
+    <inertial>
+      <origin
+        xyz="-2.9584E-09 -0.029497 -0.047588"
+        rpy="0 0 0" />
+      <mass
+        value="28.357" />
+      <inertia
+        ixx="1.4075"
+        ixy="-1.0237E-07"
+        ixz="1.4704E-08"
+        iyy="1.0699"
+        iyz="0.039805"
+        izz="1.1997" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/biglink2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/biglink2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bigjoint2"
+    type="revolute">
+    <origin
+      xyz="0 -0.672 0"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="biglink1" />
+    <child
+      link="biglink2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.61"
+      upper="2.61"
+      effort="400"
+      velocity="0.03" />
+  </joint>
+  <link
+    name="biglink3">
+    <inertial>
+      <origin
+        xyz="3.336 -1.4759E-06 -5.7008E-06"
+        rpy="0 0 0" />
+      <mass
+        value="274.86" />
+      <inertia
+        ixx="8.0735"
+        ixy="0.002016"
+        ixz="-5.357"
+        iyy="1153.7"
+        iyz="-0.00027524"
+        izz="1153.6" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/biglink3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/biglink3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bigjoint3"
+    type="revolute">
+    <origin
+      xyz="0 -0.6 0"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="biglink2" />
+    <child
+      link="biglink3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.09"
+      upper="2.09"
+      effort="400"
+      velocity="0.03" />
+  </joint>
+  <link
+    name="biglink4">
+    <inertial>
+      <origin
+        xyz="3.336 -1.4759E-06 5.7008E-06"
+        rpy="0 0 0" />
+      <mass
+        value="274.86" />
+      <inertia
+        ixx="8.0735"
+        ixy="-0.002016"
+        ixz="-5.357"
+        iyy="1153.7"
+        iyz="0.00027524"
+        izz="1153.6" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/biglink4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/biglink4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bigjoint4"
+    type="revolute">
+    <origin
+      xyz="6.672 0 0.528"
+      rpy="0 0 -3.1416" />
+    <parent
+      link="biglink3" />
+    <child
+      link="biglink4" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-4.2"
+      upper="4.2"
+      effort="400"
+      velocity="0.03" />
+  </joint>
+  <link
+    name="biglink5">
+    <inertial>
+      <origin
+        xyz="2.95839175379342E-09 -0.0475878236401959 -0.0294968999344989"
+        rpy="0 0 0" />
+      <mass
+        value="28.357280615799" />
+      <inertia
+        ixx="1.40749711888162"
+        ixy="-1.47041831340896E-08"
+        ixz="1.02371203605067E-07"
+        iyy="1.19974051920497"
+        iyz="0.0398048384652384"
+        izz="1.06990090108737" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/biglink5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/biglink5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bigjoint5"
+    type="revolute">
+    <origin
+      xyz="6.672 0 0.6"
+      rpy="0 0 3.14" />
+    <parent
+      link="biglink4" />
+    <child
+      link="biglink5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.56"
+      upper="0.53"
+      effort="400"
+      velocity="0.03" />
+  </joint>
+  <link
+    name="biglink6">
+    <inertial>
+      <origin
+        xyz="-2.9584E-09 -0.029497 -0.047588"
+        rpy="0 0 0" />
+      <mass
+        value="28.357" />
+      <inertia
+        ixx="1.4075"
+        ixy="-1.0237E-07"
+        ixz="1.4704E-08"
+        iyy="1.0699"
+        iyz="0.039805"
+        izz="1.1997" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/biglink6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/biglink6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bigjoint6"
+    type="revolute">
+    <origin
+      xyz="0 -0.672 0"
+      rpy="1.5708 1.5708 0" />
+    <parent
+      link="biglink5" />
+    <child
+      link="biglink6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.61"
+      upper="2.61"
+      effort="400"
+      velocity="0.03" />
+  </joint>
+  <link
+    name="biglink7">
+    <inertial>
+      <origin
+        xyz="0 -2.7828E-33 -0.6"
+        rpy="0 0 0" />
+      <mass
+        value="66.916" />
+      <inertia
+        ixx="9.4175"
+        ixy="1.7429E-49"
+        ixz="3.7832E-17"
+        iyy="9.4175"
+        iyz="-2.2345E-32"
+        izz="2.7751" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/biglink7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/biglink7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bigjoint7"
+    type="revolute">
+    <origin
+      xyz="0 -1.536 0"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="biglink6" />
+    <child
+      link="biglink7" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.61"
+      upper="2.61"
+      effort="400"
+      velocity="0.03" />
+  </joint>
+</robot>
